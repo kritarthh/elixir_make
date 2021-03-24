@@ -243,7 +243,7 @@ defmodule Mix.Tasks.Compile.ElixirMake do
   defp os_specific_executable(:default) do
     case :os.type() do
       {:win32, _} ->
-        "nmake"
+        "mingw32-make"
 
       {:unix, type} when type in [:freebsd, :openbsd, :netbsd] ->
         "gmake"
